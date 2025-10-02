@@ -56,3 +56,17 @@ source venv/bin/activate   # Mac/Linux
 # 3️⃣ Install dependencies
 pip install -r requirements.txt
 # CodeAlpha_Task-1-Credit-Scoring-Model
+
+
+# 1️⃣ Clone the repository
+git clone https://github.com/<your-username>/CodeAlpha-ML-Tasks.git
+cd CodeAlpha-ML-Tasks
+
+# 2️⃣ Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+# venv\Scripts\activate    # Windows
+
+# 3️⃣ Install dependencies
+pip install -r requirements.txt
+# CodeAlpha_Task-1-Credit-Scoring-Model
