@@ -1,72 +1,25 @@
-# 🤖 CodeAlpha Virtual Internship — Machine Learning Tasks
+# CodeAlpha Machine Learning Tasks
 
-![ML Banner](https://img.shields.io/badge/Machine%20Learning-Internship-blue?style=for-the-badge&logo=python)  
-Python • Scikit-Learn • TensorFlow • Pandas • NumPy • Librosa
+Three standalone Python exercises from the CodeAlpha internship:
 
----
+| Script | Exercise |
+| --- | --- |
+| `credit_scoring.py` | Train and compare credit classification models; save and load a model for prediction |
+| `emotion_recognition.py` | Emotion recognition experiment |
+| `handwritten_recognition.py` | Handwritten recognition experiment |
 
-## 🎯 Overview
-This repository contains **solutions for three end-to-end Machine Learning projects** completed during the **CodeAlpha Virtual Internship**.  
+## Credit scoring quick start
 
-Each project demonstrates a **complete ML pipeline** — from data preprocessing, model training, evaluation, to deployment readiness.  
-
----
-
-## ✨ Features
-- 🤖 **Machine Learning**
-  - Multiple ML algorithms comparison  
-  - Automated preprocessing & scaling  
-  - Model saving/loading for reuse  
-
-- 📊 **Data Processing**
-  - Robust cleaning pipeline  
-  - Feature engineering  
-  - Dataset splitting & augmentation  
-
-- 📈 **Evaluation & Metrics**
-  - Accuracy, ROC-AUC, Confusion Matrix  
-  - Model interpretation  
-  - Visualizations  
-
-- 🛠️ **Production Ready**
-  - Modular code design  
-  - Logging & checkpoints  
-  - Easy deployment setup  
-
----
-
-## 🚀 Quick Start
-
-### 🔧 Prerequisites
-- Python 3.8+  
-- pip  
-- Git  
-
-### 📦 Installation
 ```bash
-# 1️⃣ Clone the repository
-git clone https://github.com/<your-username>/CodeAlpha-ML-Tasks.git
-cd CodeAlpha-ML-Tasks
+git clone https://github.com/awaisjanicode/CodeAlpha_Task-1-Credit-Scoring-Model.git
+cd CodeAlpha_Task-1-Credit-Scoring-Model
+python -m venv .venv
+# Activate .venv for your shell
+pip install numpy pandas scikit-learn joblib
+python credit_scoring.py --train
+python credit_scoring.py --predict --sample "age=30,income=50000,loan_amount=5000,loan_duration_months=24,num_credit_lines=2,delinquencies=0"
+```
 
-# 2️⃣ Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-# venv\Scripts\activate    # Windows
+If `data/credit_data.csv` is absent, the credit script generates a **synthetic** dataset. The trained `credit_scoring_model.joblib` is generated locally. Review each other script's imports and input requirements before running it; this repository does not contain a shared `requirements.txt`.
 
-# 3️⃣ Install dependencies
-pip install -r requirements.txt
-# CodeAlpha_Task-1-Credit-Scoring-Model
-
-
-# 1️⃣ Clone the repository
-git clone https://github.com/<your-username>/CodeAlpha-ML-Tasks.git
-cd CodeAlpha-ML-Tasks
-
-# 2️⃣ Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-# venv\Scripts\activate    # Windows
-
-# 3️⃣ Install dependencies
-pip install -r requirements.txt
-# CodeAlpha_Task-1-Credit-Scoring-Model
+These are educational experiments. Synthetic credit labels and model predictions must not be used to make real lending decisions.
